@@ -35,13 +35,13 @@ int main() {
 		string author = line.substr(k+1);
 		quotes.push_back("\n\"" + quote + "\"\n\n- " + author + "\n\n");
 	}
+	
 	int sockfd;
 	struct addrinfo hints, *servinfo, *p;
-	struct sockaddr_storage their_addr;
-	socklen_t sin_size;
 	int yes = 1;
 	char s[INET6_ADDRSTRLEN];
 	int rv;
+
 	memset(&hints, 0, sizeof(hints));
 	hints.ai_family = AF_UNSPEC;
 	hints.ai_socktype = SOCK_STREAM;
@@ -89,7 +89,8 @@ int main() {
 	srand(time(NULL));
 
 	while(true) {
-		sin_size = sizeof(their_addr);
+		struct sockaddr_storage their_addr;
+		socklen_t sin_size = sizeof(their_addr);
 		int new_fd = accept(sockfd, (struct sockaddr *) &their_addr, &sin_size);
 		if(new_fd == -1) {
 			perror("accept");
