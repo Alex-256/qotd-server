@@ -88,7 +88,7 @@ int main() {
 
 	srand(time(NULL));
 
-	while(1) {
+	while(true) {
 		sin_size = sizeof(their_addr);
 		int new_fd = accept(sockfd, (struct sockaddr *) &their_addr, &sin_size);
 		if(new_fd == -1) {
