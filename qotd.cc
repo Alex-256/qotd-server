@@ -12,7 +12,7 @@
 #include <fstream>
 #include <vector>
 
-#define PORT "3490"
+#define PORT "17"
 #define BACKLOG 10
 
 using namespace std;
