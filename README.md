@@ -1,5 +1,5 @@
 # qotd-server
-This is an implementation of the [Quote of the Day protocol](https://tools.ietf.org/html/rfc865) in C++. It listens on port 17 and sends a random quote from `qotd.txt`. 
+This is a TCP implementation of the [Quote of the Day protocol](https://tools.ietf.org/html/rfc865) in C++. It listens on port 17 and sends a random quote from `qotd.txt`. 
 
 ### Try it out
 To run:
