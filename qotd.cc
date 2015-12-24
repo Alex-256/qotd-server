@@ -86,6 +86,8 @@ int main() {
 
 	printf("server: waiting for connections on port %s...\n", PORT);
 
+	srand(time(NULL));
+
 	while(1) {
 		sin_size = sizeof(their_addr);
 		int new_fd = accept(sockfd, (struct sockaddr *) &their_addr, &sin_size);
@@ -96,8 +98,7 @@ int main() {
 
 		inet_ntop(their_addr.ss_family, get_in_addr((struct sockaddr *) &their_addr), s, sizeof(s));
 		printf("server: got connection from %s\n", s);
-
-		srand(time(NULL));
+		
 		int daysSinceEpoch = rand() % quotes.size();
 		string k = quotes[daysSinceEpoch];
 		if(send(new_fd, k.c_str(), k.length(), 0) == -1) {
