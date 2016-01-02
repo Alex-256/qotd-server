@@ -1,5 +1,5 @@
 # qotd-server
-This is a TCP implementation of the [Quote of the Day protocol](https://tools.ietf.org/html/rfc865) in C++, Node.js and Java. They listen on port 17 and send a random quote from `qotd.txt`. 
+This is a TCP implementation of the [Quote of the Day protocol](https://tools.ietf.org/html/rfc865) in C++, Node.js, Java and Scala. They listen on port 17 and send a random quote from `qotd.txt`. 
 
 ### Try it out
 To run the C++ version:
@@ -24,6 +24,11 @@ There also exists a multi-threaded Java version:
 ```bash
 javac MultiThreadedQOTD.java
 sudo java MultiThreadedQOTD
+```
+
+To run the Scala version:
+```bash
+scala qotd.scala
 ```
 
 To try it out run:
