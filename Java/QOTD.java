@@ -16,7 +16,7 @@ public class QOTD {
 
 	public static void main(String[] args) {
 		try {
-			BufferedReader in = new BufferedReader(new FileReader("./qotd.txt"));
+			BufferedReader in = new BufferedReader(new FileReader("../qotd.txt"));
 			String line;
 			while((line = in.readLine()) != null) {
 				String[] parts = line.split("\\|");

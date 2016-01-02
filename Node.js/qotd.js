@@ -9,7 +9,7 @@ var server = net.createServer(function(socket) {
 	socket.end();
 });
 
-fs.readFile("./qotd.txt", function(err, buffer) {
+fs.readFile("../qotd.txt", function(err, buffer) {
 	var lines = buffer.toString().split("\n");
 	lines.forEach(function(line) {
 		if(line !== "") {

@@ -20,7 +20,7 @@ public class MultiThreadedQOTD {
 	public static void main(String[] args) {
 		ServerSocket server = null;
 		try {
-			BufferedReader in = new BufferedReader(new FileReader("./qotd.txt"));
+			BufferedReader in = new BufferedReader(new FileReader("../qotd.txt"));
 			String line;
 			while((line = in.readLine()) != null) {
 				String[] parts = line.split("\\|");

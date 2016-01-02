@@ -9,7 +9,7 @@ object QOTD {
 	val pool = Executors.newFixedThreadPool(20)
 
 	def main(args: Array[String]) {
-		val quotes = Source.fromFile("./qotd.txt").getLines().map(line  => {
+		val quotes = Source.fromFile("../qotd.txt").getLines().map(line  => {
 			val parts = line.split("\\|")
 			val quote = parts(0)
 			val author = parts(1)

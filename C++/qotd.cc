@@ -27,7 +27,7 @@ void *get_in_addr(struct sockaddr *sa) {
 
 int main() {
 	vector<string> quotes;
-	ifstream file("./qotd.txt");
+	ifstream file("../qotd.txt");
 	string line;
 	while(getline(file, line)) {
 		int k = line.find("|");
