@@ -24,5 +24,3 @@ fs.readFile("./qotd.txt", function(err, buffer) {
 		console.log("Server listening on port 17");
 	});
 });
-
-

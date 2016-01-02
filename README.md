@@ -16,8 +16,8 @@ sudo node qotd.js # You need to use sudo so it can run on port 17
 
 To run the Java version:
 ```bash
-javac qotd.java
-sudo java qotd
+javac QOTD.java
+sudo java QOTD
 ```
 
 There also exists a multi-threaded Java version:

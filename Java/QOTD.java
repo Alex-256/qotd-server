@@ -10,7 +10,7 @@ import java.io.OutputStreamWriter;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-public class qotd {
+public class QOTD {
 	private static ArrayList<String> quotes = new ArrayList<String>();
 	private static Random rand = new Random();
 
