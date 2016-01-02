@@ -20,6 +20,12 @@ javac qotd.java
 sudo java qotd
 ```
 
+There also exists a multi-threaded Java version:
+```bash
+javac MultiThreadedQOTD.java
+sudo java MultiThreadedQOTD
+```
+
 To try it out run:
 ```bash
 nc localhost 17
