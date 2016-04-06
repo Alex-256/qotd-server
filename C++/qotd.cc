@@ -11,6 +11,7 @@
 #include <time.h>
 #include <fstream>
 #include <vector>
+#include <iostream>
 
 #define PORT "17"
 #define BACKLOG 10
@@ -25,9 +26,13 @@ void *get_in_addr(struct sockaddr *sa) {
 	}
 }
 
-int main() {
+int main(int argc, char* argv[]) {
 	vector<string> quotes;
-	ifstream file("../qotd.txt");
+	string filename = "../qotd.txt";
+	if(argc == 2) {
+		filename = argv[1];
+	}
+	ifstream file(filename.c_str());
 	string line;
 	while(getline(file, line)) {
 		int k = line.find("|");
