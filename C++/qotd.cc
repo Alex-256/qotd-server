@@ -1,17 +1,17 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <cstdio>
+#include <cstdlib>
 #include <unistd.h>
-#include <string>
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <netdb.h>
 #include <arpa/inet.h>
 #include <sys/wait.h>
-#include <time.h>
+#include <ctime>
 #include <fstream>
 #include <vector>
 #include <iostream>
+#include <cstring>
 
 #define PORT "17"
 #define BACKLOG 10
