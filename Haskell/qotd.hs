@@ -1,4 +1,5 @@
-import Network.Socket
+import Network (listenOn, PortID(PortNumber))
+import Network.Socket (send, close, Socket, SockAddr, accept)
 import Data.List.Split
 import System.Random
 
@@ -14,10 +15,11 @@ splitQuote quote = Quote (parts !! 0) (parts !! 1)
 main :: IO ()
 main = do
   quotes <- map splitQuote <$> filter (/="") <$> splitOn "\n" <$> readFile "../qotd.txt"
-  sock <- socket AF_INET Stream 0
-  setSocketOption sock ReuseAddr 1
-  bind sock (SockAddrInet 17 iNADDR_ANY)
-  listen sock 2
+--  sock <- socket AF_INET Stream 0
+--  setSocketOption sock ReuseAddr 1
+--  bind sock (SockAddrInet 17 iNADDR_ANY)
+--  listen sock 2
+  sock <- listenOn $ PortNumber 17
   mainLoop sock quotes
 
 mainLoop :: Socket -> [Quote] -> IO ()
