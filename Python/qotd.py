@@ -22,7 +22,6 @@ class server(object):
 			threading.Thread(target = self.listenToClient,args = (client,address)).start()
 
 	def listenToClient(self, client, address):
-		recvmsg = client.recv(65355)
 		sendmsg = self.server()
 		objectbyte = sendmsg.encode()
 		client.send(objectbyte)
