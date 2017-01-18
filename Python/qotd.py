@@ -4,7 +4,6 @@
 
 import socket
 import threading
-import csv
 import random
 
 class server(object):
@@ -20,7 +19,6 @@ class server(object):
 		self.socket.listen(10)
 		while True:
 			client, address = self.socket.accept()
-			client.settimeout(10)
 			threading.Thread(target = self.listenToClient,args = (client,address)).start()
 
 	def listenToClient(self, client, address):
