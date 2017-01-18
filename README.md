@@ -20,6 +20,17 @@ javac QOTD.java
 sudo java QOTD
 ```
 
+To run the Python version:
+```bash
+chmod +x qotd.py
+sudo ./qotd.py
+```
+or
+```bash
+sudo python3 qotd.py
+```
+You must have already installed python3.
+
 There also exists a multi-threaded Java version:
 ```bash
 javac MultiThreadedQOTD.java
