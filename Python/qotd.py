@@ -14,6 +14,10 @@ class server(object):
 		self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 		self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 		self.socket.bind((self.host, self.port))
+		self.linearray = []
+		reader = open('../qotd.txt', 'r')
+		for line in reader.readlines():
+			self.linearray.append(line)
 
 	def listen(self):
 		self.socket.listen(10)
@@ -28,11 +32,7 @@ class server(object):
 		client.close()
 
 	def server(self):
-		linearray = []
-		reader = open('../qotd.txt', 'r')
-		for line in reader.readlines():
-			linearray.append(line)
-		quote = random.choice(linearray)
+		quote = random.choice(self.linearray)
 		quote = quote.split("|")
 		response = quote[0] + "\n" + quote[1]
 		return response
@@ -41,3 +41,7 @@ try:
 	myserv.listen()
 except KeyboardInterrupt:
 	print(" pressed. Exiting...")
+except:
+	print("An error has occurred. Exiting...")
+finally:
+	reader.close()
