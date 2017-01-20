@@ -1,17 +1,19 @@
 # qotd-server
-This is a TCP implementation of the [Quote of the Day protocol](https://tools.ietf.org/html/rfc865) in C++, Node.js, Java and Scala. They listen on port 17 and send a random quote from `qotd.txt`. 
+This is a TCP implementation of the [Quote of the Day protocol](https://tools.ietf.org/html/rfc865) in C++, Node.js, Java, Python3 and Scala. They listen on port 17 and send a random quote from `qotd.txt`. 
+
+You need to use sudo so it can run on port 17.
 
 ### Try it out
 To run the C++ version:
 
 ```bash
 make qotd
-sudo ./qotd # You need to use sudo so it can run on port 17
+sudo ./qotd
 ```
 
 To run the Node.js version:
 ```bash
-sudo node qotd.js # You need to use sudo so it can run on port 17
+sudo node qotd.js
 ```
 
 To run the Java version:
@@ -45,6 +47,10 @@ scala qotd.scala
 To try it out run:
 ```bash
 nc localhost 17
+```
+or
+```bash
+telnet localhost 17
 ```
 
 ### Live Demo
