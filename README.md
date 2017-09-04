@@ -52,9 +52,3 @@ or
 ```bash
 telnet localhost 17
 ```
-
-### Live Demo
-I also have a live demo of the C++ version at `hashanp.xyz`:
-```bash
-nc hashanp.xyz 17
-```
